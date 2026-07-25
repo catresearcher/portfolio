@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { Background } from "@/components/Background/background";
 import Navbar from "@/components/Navbar/navbar";
+import { InfoProvider } from "@/context/infoContext";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -23,10 +24,12 @@ export default function RootLayout({
       <body>
         <Background />
 
-        <div className="relative min-h-screen flex flex-col items-center">
-          <Navbar />
-          {children}
-        </div>
+        <InfoProvider>
+          <div className="relative min-h-screen flex flex-col items-center">
+            <Navbar />
+            {children}
+          </div>
+        </InfoProvider>
       </body>
     </html>
   );
