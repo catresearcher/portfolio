@@ -4,7 +4,7 @@ import Socials from "./socials";
 export default function Hero() {
   return (
     <div className="space-y-4 w-[95%] sm:w-[75%]">
-      <span className="flex items-center space-x-1 text-muted-foreground/30">
+      <span className="flex items-center space-x-1 text-foreground font-medium">
         <Location className="size-4" />
         <p className="text-lg">Finland</p>
       </span>

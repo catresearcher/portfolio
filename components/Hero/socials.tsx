@@ -1,25 +1,28 @@
+"use client";
 import Link from "next/link";
 import { Github, LinkedIn, Location } from "../assets";
+import { useInfo } from "@/context/infoContext";
 
 export default function Socials() {
+  const { info } = useInfo();
+
   return (
     <div className="flex items-center space-x-4 text-lg text-muted-foreground/30">
-      <Link
-        href={"https://github.com/catresearcher"}
-        className="flex items-center space-x-1 hover:text-primary transation-all duration-150"
-      >
-        <Github className="size-5" />
-        <p className="font-medium hidden sm:block">Github</p>
-      </Link>
-      <p>/</p>
-
-      <Link
-        href={"https://www.linkedin.com/in/aleksi-tiainen-78391741b"}
-        className="flex items-center space-x-1 hover:text-primary transation-all duration-150"
-      >
-        <LinkedIn className="size-5" />
-        <p className="font-medium hidden sm:block">LinkedIn</p>
-      </Link>
+      {info.socials.map((s, idx) => {
+        const Icon = s.icon;
+        return (
+          <div key={`${s.name}-${idx}`} className="flex items-center space-x-4">
+            <Link
+              href={s.link}
+              className="flex items-center space-x-1 hover:text-primary transation-all duration-150"
+            >
+              <Icon className="size-5" />
+              <p className="font-medium hidden sm:block">{s.name}</p>
+            </Link>
+            {info.socials.length !== idx + 1 && <p>/</p>}
+          </div>
+        );
+      })}
     </div>
   );
 }
