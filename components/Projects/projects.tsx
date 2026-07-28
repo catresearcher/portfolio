@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { Github } from "../assets";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Projects() {
