@@ -1,4 +1,6 @@
 import {
+  Document,
+  ExpressJS,
   Git,
   Github,
   LinkedIn,
@@ -8,6 +10,7 @@ import {
   Postgres,
   Prisma,
   React,
+  Shadcn,
   Tailwind,
   Typescript,
 } from "@/components/assets";
@@ -102,6 +105,58 @@ export const info: InfoProps = {
         component: Postgres,
         color: "bg-cyan-500/20",
       },
+    },
+  ],
+  experience: [
+    {
+      name: "Flying Mountains Oy",
+      title: "Full-stack Developer",
+      length: "2026 Feb - 2026 June",
+    },
+  ],
+  projects: [
+    {
+      name: "Sellpad",
+      status: "WIP",
+      description:
+        "A modern digital storefront platform, built with Next.js, TypeScript, ExpressJS, Prisma, and PostgreSQL.",
+      stack: [
+        {
+          name: "Next.Js",
+          icon: Nextjs,
+        },
+        {
+          name: "ExpressJs",
+          icon: ExpressJS,
+        },
+        {
+          name: "Prisma",
+          icon: Prisma,
+        },
+        {
+          name: "PostgresSQL",
+          icon: Postgres,
+        },
+        {
+          name: "Typescript",
+          icon: Typescript,
+        },
+        {
+          name: "Shadcn",
+          icon: Shadcn,
+        },
+      ],
+      link: "https://github.com/catresearcher/Sellpad",
+      thumbnail:
+        "https://cdn.discordapp.com/attachments/972845233329041508/1531482342777032915/606025890-a7431496-6cef-45f4-a8bc-661d12e63215.png?ex=6a695f94&is=6a680e14&hm=3c30b6e1f25b38b95c4ec93a462d5009e65faf3fb723d09f54765f65f01f1103&",
+    },
+  ],
+  education: [
+    {
+      name: "Omnia Leppävaara",
+      title: "Tieto- ja viestintätekniikan perustutkinto",
+      logo: "/Omnia.png",
+      length: "2024 Aug - 2026 Jun",
     },
   ],
 };

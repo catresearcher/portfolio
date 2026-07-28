@@ -17,4 +17,23 @@ export type InfoProps = {
       color: string;
     };
   }[];
+  experience: {
+    name: string;
+    title: string;
+    length: string;
+  }[];
+  projects: {
+    name: string;
+    status: string;
+    description: string;
+    stack: { name: string; icon: ComponentType<{ className?: string }> }[];
+    link: string;
+    thumbnail: string;
+  }[];
+  education: {
+    name: string;
+    title: string;
+    logo: string;
+    length: string;
+  }[];
 };
