@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
-import { DotPattern } from "@/components/ui/dot-pattern";
+
 export function Background() {
   return (
     <motion.div
