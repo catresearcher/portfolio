@@ -21,6 +21,7 @@ export type InfoProps = {
     name: string;
     title: string;
     length: string;
+    description: string;
   }[];
   projects: {
     name: string;
@@ -29,6 +30,7 @@ export type InfoProps = {
     stack: { name: string; icon: ComponentType<{ className?: string }> }[];
     link: string;
     thumbnail: string;
+    length: string;
   }[];
   education: {
     name: string;

@@ -14,60 +14,50 @@ export default function Projects() {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-medium text-primary-foreground">Projects</h1>
-      <div className="grid grid-cols-1 space-y-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 ">
         {info.projects.map((p, idx) => (
           <div
             key={`${p.name}-${idx}`}
-            onClick={() => window.open(p.link, "_blank", "noopener,noreferrer")}
-            className="group relative aspect-video cursor-pointer overflow-hidden rounded-md border transition-all duration-150"
+            className="w-full flex flex-col bg-card rounded-md"
           >
             <Image
               src={p.thumbnail}
-              alt={p.name}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              width={1000}
+              height={1000}
+              className="w-full h-full rounded-md"
+              alt="thumbnail"
             />
-
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent" />
-
-            <div className="absolute inset-x-0 bottom-0 px-5">
-              <div className="flex flex-col gap-3 transition-transform duration-300 group-hover:-translate-y-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-white">{p.name}</h3>
-
-                  <p className="line-clamp-2 text-sm text-gray-300">
-                    {p.description}
-                  </p>
-                </div>
-                <div className="hidden sm:flex flex-wrap space-x-2 space-y-2">
-                  {p.stack.map((s, idx) => {
-                    const Icon = s.icon;
-                    return (
-                      <Badge
-                        className="bg-card rounded h-7 flex items-center space-x-1 text-sm"
-                        key={`${s.name}-${idx}`}
-                      >
-                        <Icon className="size-8" />
-                        {s.name}
-                      </Badge>
-                    );
-                  })}
-                </div>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    window.open(p.link, "_blank", "noopener,noreferrer");
-                  }}
-                  className="inline-flex w-fit items-center gap-2 rounded-md bg-white/10 px-3 py-2 text-sm text-white backdrop-blur
-                 opacity-0 translate-y-2
-                 transition-all duration-300
-                 group-hover:translate-y-0 group-hover:opacity-100
-                 hover:bg-white/20"
-                >
-                  <Github className="h-4 w-4" />
-                  Source
-                </button>
+            <div className="border-t-2 border-b-2 w-full p-4 space-y-2">
+              <div className="flex items-center justify-between">
+                <h1 className="text-2xl font-medium">{p.name}</h1>
+                <p className="text-muted-foreground text-sm">{p.length}</p>
               </div>
+              <p className="text-muted-foreground text-sm">{p.description}</p>
+              <div className="flex flex-wrap space-x-1 space-y-2">
+                {p.stack.map((s, idx) => {
+                  const Icon = s.icon;
+                  return (
+                    <Badge
+                      key={`${s.name}-${idx}`}
+                      className="bg-background flex items-center space-x-2 rounded"
+                    >
+                      <Icon className="" />
+                      {s.name}
+                    </Badge>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="p-1 flex items-center">
+              <Button
+                onClick={() =>
+                  window.open(p.link, "_blank", "noopener,noreferrer")
+                }
+                className="bg-background w-full h-9 rounded cursor-pointer hover:bg-background/75"
+              >
+                <Github />
+                View Code
+              </Button>
             </div>
           </div>
         ))}

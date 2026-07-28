@@ -1,5 +1,11 @@
 "use client";
 import { useInfo } from "@/context/infoContext";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import Image from "next/image";
 
 export default function Education() {
@@ -10,6 +16,7 @@ export default function Education() {
       <h1 className="text-2xl font-medium text-primary-foreground">
         Education
       </h1>
+
       <div className="space-y-4">
         {info.education.map((exp, idx) => (
           <div

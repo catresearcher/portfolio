@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { InfoProvider } from "@/context/infoContext";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -21,7 +22,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
           ease: [0.22, 1, 0.36, 1],
         }}
       >
-        {children}
+        <TooltipProvider>{children}</TooltipProvider>
       </motion.div>
     </InfoProvider>
   );

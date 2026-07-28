@@ -19,8 +19,11 @@ import { InfoProps } from "@/types/info";
 export const info: InfoProps = {
   based: "Finland",
   hero_text: "Hi, I'm Aleksi Tiainen",
-  hero_description:
-    "I'm an 18-year-old full-stack developer from Finland with a passion for building fast, responsive, and user-friendly web applications. I enjoy solving problems and learning new technologies.",
+  hero_description: `I'm an 18-year-old full-stack developer.
+
+I've been coding for around four years, constantly improving my skills and exploring new technologies. I working with both the frontend and backend.
+
+I'm always looking for opportunities to learn, take on new challenges, and create projects that push my skills further.`,
   socials: [
     {
       name: "Github",
@@ -75,6 +78,14 @@ export const info: InfoProps = {
       },
     },
     {
+      name: "Github",
+      description: "Version Control",
+      icon: {
+        component: Github,
+        color: "bg-gray-600/20",
+      },
+    },
+    {
       name: "Node.Js",
       description: "Backend",
       icon: {
@@ -111,7 +122,9 @@ export const info: InfoProps = {
     {
       name: "Flying Mountains Oy",
       title: "Full-stack Developer",
-      length: "2026 Feb - 2026 June",
+      length: "2026 Feb - 2026 Jun",
+      description:
+        "Architected and developed an MVP for a B2B sales intelligence platform featuring interactive map-based lead tracking. Enabled organizations to manage sales opportunities through map markers and implemented dynamic PDF offer generation for printing and sharing with clients.",
     },
   ],
   projects: [
@@ -147,6 +160,7 @@ export const info: InfoProps = {
         },
       ],
       link: "https://github.com/catresearcher/Sellpad",
+      length: "2026 May - Present",
       thumbnail:
         "https://cdn.discordapp.com/attachments/972845233329041508/1531482342777032915/606025890-a7431496-6cef-45f4-a8bc-661d12e63215.png?ex=6a695f94&is=6a680e14&hm=3c30b6e1f25b38b95c4ec93a462d5009e65faf3fb723d09f54765f65f01f1103&",
     },

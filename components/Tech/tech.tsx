@@ -9,16 +9,16 @@ export default function Tech() {
       <h1 className="text-2xl font-medium text-primary-foreground">
         Current Technologies
       </h1>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         {info.technologies.map((t, idx) => {
           const Icon = t.icon.component;
           return (
             <div
               key={`${t.name}-${idx}`}
-              className="flex w-full items-center gap-4 rounded-md bg-card p-1.5"
+              className="flex w-full items-center gap-4 rounded-lg bg-card p-1.5"
             >
               <span
-                className={`flex h-12 w-12 items-center justify-center rounded ${t.icon.color}`}
+                className={`flex h-12 w-12 items-center justify-center rounded-md ${t.icon.color}`}
               >
                 <Icon className="w-8 h-8" />
               </span>
