@@ -161,8 +161,7 @@ I'm always looking for opportunities to learn, take on new challenges, and creat
       ],
       link: "https://github.com/catresearcher/Sellpad",
       length: "2026 May - Present",
-      thumbnail:
-        "https://cdn.discordapp.com/attachments/972845233329041508/1531482342777032915/606025890-a7431496-6cef-45f4-a8bc-661d12e63215.png?ex=6a695f94&is=6a680e14&hm=3c30b6e1f25b38b95c4ec93a462d5009e65faf3fb723d09f54765f65f01f1103&",
+      thumbnail: "/sellpad.png",
     },
   ],
   education: [
