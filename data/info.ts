@@ -124,7 +124,7 @@ I'm always looking for opportunities to learn, take on new challenges, and creat
       title: "Full-stack Developer",
       length: "2026 Feb - 2026 Jun",
       description:
-        "Architected and developed an MVP for a B2B sales intelligence platform featuring interactive map-based lead tracking. Enabled organizations to manage sales opportunities through map markers and implemented dynamic PDF offer generation for printing and sharing with clients.",
+        "Architected and developed an MVP for a B2C sales intelligence platform featuring interactive map-based lead tracking. Enabled organizations to manage sales opportunities through map markers and implemented dynamic PDF offer generation for printing and sharing with clients.",
     },
   ],
   projects: [
