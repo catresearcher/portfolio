@@ -1,5 +1,5 @@
 import { Finland } from "../assets";
-import { IconCloudDemo } from "../IconCloud/iconCloud";
+import { OrbitingCirclesDemo } from "../OribitinIcons/Icons";
 import Socials from "./socials";
 
 export default function Hero() {
@@ -16,7 +16,7 @@ export default function Hero() {
         <p className="text-foreground font-medium">Full-Stack Developer</p>
         <Socials />
       </div>
-      <IconCloudDemo />
+      <OrbitingCirclesDemo />
     </div>
   );
 }
